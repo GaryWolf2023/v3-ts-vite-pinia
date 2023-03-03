@@ -1,0 +1,128 @@
+{
+  "id": "3927735",
+  "name": "v3-ts-vite-pinia-demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "一个基于vue3的基础框架的图标库",
+  "glyphs": [
+    {
+      "icon_id": "577402",
+      "name": "向右1",
+      "font_class": "xiangyou1",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    },
+    {
+      "icon_id": "658025",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "3640170",
+      "name": "成功",
+      "font_class": "chenggong",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "5387613",
+      "name": "向左",
+      "font_class": "xiangzuo",
+      "unicode": "eb15",
+      "unicode_decimal": 60181
+    },
+    {
+      "icon_id": "5387937",
+      "name": "箭头_左右切换_o",
+      "font_class": "jiantou_zuoyouqiehuan_o",
+      "unicode": "eb95",
+      "unicode_decimal": 60309
+    },
+    {
+      "icon_id": "5608290",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "6204756",
+      "name": "失败",
+      "font_class": "shibai",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "7215720",
+      "name": "Loading",
+      "font_class": "Loading",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    },
+    {
+      "icon_id": "7712687",
+      "name": "loading",
+      "font_class": "loading1",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    },
+    {
+      "icon_id": "109751",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "666885",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "1288646",
+      "name": "个人中心",
+      "font_class": "gerenzhongxin",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "1368717",
+      "name": "开启",
+      "font_class": "open",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "1903298",
+      "name": "头像 女孩",
+      "font_class": "icon-test",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "1904339",
+      "name": "头像 男孩",
+      "font_class": "icon-test1",
+      "unicode": "e668",
+      "unicode_decimal": 58984
+    },
+    {
+      "icon_id": "29522589",
+      "name": "10G菜单开启",
+      "font_class": "a-10Gcaidankaiqi",
+      "unicode": "e676",
+      "unicode_decimal": 58998
+    },
+    {
+      "icon_id": "29522598",
+      "name": "10H菜单关闭",
+      "font_class": "a-10Hcaidanguanbi",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    }
+  ]
+}

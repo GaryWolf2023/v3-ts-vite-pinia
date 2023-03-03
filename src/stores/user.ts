@@ -1,14 +1,16 @@
 import { defineStore } from 'pinia'
-export const useUserStore = defineStore('users', {
-  state: () => ({ 
-    count: 0,
-  }),
-  getters: {
-    double: (state) => state.count * 2,
-  },
-  actions: {
-    increment() {
-      this.count++
-    },
+export const useStore = defineStore('storeId', {
+  state: () => {
+    return {
+      // 用于初始化空列表
+      userList: [] as UserInfo[],
+      // 用于尚未加载的数据
+      user: null as UserInfo | null,
+    }
   },
 })
+
+interface UserInfo {
+  name: string
+  age: number
+}
