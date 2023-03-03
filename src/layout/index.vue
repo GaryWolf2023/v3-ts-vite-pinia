@@ -1,6 +1,7 @@
 <script setup lang="ts" name="Layout">
 import Header from './Header/index.vue'
 import { ref, onMounted } from 'vue'
+
 const a = ref(10)
 onMounted(() => {
   console.log(a)

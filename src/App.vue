@@ -1,11 +1,18 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { ref } from 'vue'
+import { RouterView } from 'vue-router'
 import Layout from '@/layout/index.vue'
+import { ElConfigProvider } from 'element-plus'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
+
+const locale = ref(zhCn)
 </script>
 
 <template>
   <RouterView>
-    <Layout></Layout>
+    <el-config-provider :locale="locale">
+      <Layout></Layout>
+    </el-config-provider>
   </RouterView>
 </template>
 
