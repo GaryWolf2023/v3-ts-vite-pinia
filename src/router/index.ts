@@ -4,13 +4,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/home',
-      name: 'home',
-      component: ()=>import('@/views/home')
-    },
-    {
       path: '/login',
       name: 'login',
+      meta: {title: '登录'},
       component: () => import('@/views/login')
     }
   ]
