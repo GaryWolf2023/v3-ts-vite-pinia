@@ -1,10 +1,10 @@
 <template>
   <div>
-    首页
+    404
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" name="Page404">
 
 </script>
 

@@ -14,7 +14,9 @@ onMounted(() => {
       <header class="layout-header">
         <Header></Header>
       </header>
-      <second class="layout-main">2</second>
+      <second class="layout-main">
+        <router-view></router-view>
+      </second>
     </div>
   </div>
 </template>

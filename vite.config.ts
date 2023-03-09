@@ -15,6 +15,7 @@ export default defineConfig({
     DefineOptions(),
     AutoImport({
       resolvers: [ElementPlusResolver()],
+      imports: ['vue', 'vue-router']
     }),
     Components({
       resolvers: [ElementPlusResolver()],

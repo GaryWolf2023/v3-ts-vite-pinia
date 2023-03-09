@@ -9,11 +9,10 @@ const locale = ref(zhCn)
 </script>
 
 <template>
-  <RouterView>
-    <el-config-provider :locale="locale">
-      <Layout></Layout>
-    </el-config-provider>
-  </RouterView>
+  <el-config-provider :locale="locale">
+    <RouterView>
+    </RouterView>
+  </el-config-provider>
 </template>
 
 <style scoped></style>
