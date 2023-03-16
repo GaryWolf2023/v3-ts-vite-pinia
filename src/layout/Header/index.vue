@@ -27,11 +27,13 @@ const { OPENMENU } = storeToRefs(appStore) // pinia提供的方法，使我们�
 let userInfo = reactive({})
 function changeAside() {
   // appStore.changeAside()
-  // appStore.OPENMENU = !appStore.OPENMENU
+
+  appStore.OPENMENU = !appStore.OPENMENU
+
   appStore.$patch((state) => {
     console.log(state)
-    state.items.push({ OPENMENU: false })
-    state.hasChanged = true
+    // state.items.push({ OPENMENU: false })
+    // state.hasChanged = true
   })
   console.log(appStore)
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts" name="Layout">
 import Header from './Header/index.vue'
+import Aside from './aside/aside.vue'
 import { ref, onMounted } from 'vue'
 
 const a = ref(10)
@@ -9,15 +10,19 @@ onMounted(() => {
 </script>
 <template>
   <div class="layout-box">
-    <aside class="layout-aside">1</aside>
-    <div class="layout-content">
-      <header class="layout-header">
-        <Header></Header>
-      </header>
-      <second class="layout-main">
-        <router-view></router-view>
-      </second>
-    </div>
+    <el-container>
+      <el-aside :width="'200'" class="layout-aside">
+        <Aside></Aside>
+      </el-aside>
+      <el-container class="layout-content">
+        <el-header class="layout-header">
+          <Header></Header>
+        </el-header>
+        <el-main class="layout-main">
+          <router-view></router-view>
+        </el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 <style lang="scss" scoped>
@@ -28,12 +33,13 @@ onMounted(() => {
   justify-content: flex-start;
   background-color: $bg-color;
   .layout-aside {
-    width: 220px;
+    /* width: 200px; */
     height: 100%;
     border-right: $border;
   }
   .layout-content {
-    width: calc(100% - 220px);
+    /* width: calc(100% - 200px); */
+    flex: 1;
     height: 100%;
     .layout-header {
       height: 50px;
@@ -44,6 +50,7 @@ onMounted(() => {
       position: relative;
     }
     .layout-main {
+      padding: 0;
       height: calc(100% - 50px);
     }
   }
