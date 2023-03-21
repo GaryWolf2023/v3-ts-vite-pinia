@@ -3,7 +3,7 @@ export const asyncRouter = [
     {
         path: '/',
         component: Layout,
-        redirect: 'home',
+        redirect: '/home',
         children: [
             {
                 path: 'home',
@@ -16,10 +16,11 @@ export const asyncRouter = [
     {
         path: '/echarts',
         component: Layout,
+        redirect: '/echarts/index',
         children: [
             {
-                path: '/',
-                name: 'echarts',
+                path: 'index',
+                name: 'index',
                 meta: {title: 'echarts', icon: ''},
                 component: () => import('@/views/home/index.vue')
             }
