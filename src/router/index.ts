@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { asyncRouter } from './asyncRouter'
-import Login from '@/views/login/index.vue'
+import Login from '@/views/login/login.vue'
 import Page404 from '@/components/pageError/404.vue'
 
 const router = createRouter({

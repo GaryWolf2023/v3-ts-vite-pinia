@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup name="Header">
-import { reactive, watch, computed } from 'vue'
+// import { reactive, watch, computed } from 'vue'
 import { useAppStore } from '@/stores/app'
 import { storeToRefs } from 'pinia'
 
@@ -27,12 +27,12 @@ const { OPENMENU } = storeToRefs(appStore) // pinia提供的方法，使我们�
 let userInfo = reactive({})
 function changeAside() {
   // appStore.changeAside()
-  // appStore.OPENMENU = !appStore.OPENMENU
-  appStore.$patch((state) => {
-    console.log(state)
-    state.items.push({ OPENMENU: false })
-    state.hasChanged = true
-  })
+  appStore.OPENMENU = !appStore.OPENMENU
+  // appStore.$patch((state) => {
+  //   console.log(state)
+  //   state.items.push({ OPENMENU: false })
+  //   state.hasChanged = true
+  // })
   console.log(appStore)
 }
 </script>
