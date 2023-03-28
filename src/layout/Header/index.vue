@@ -24,10 +24,10 @@ import { storeToRefs } from 'pinia'
 const appStore = useAppStore()
 // const isopen = computed(() => appStore.OPENMENU) // 我们使用计算属性来获取我们的store内容
 const { OPENMENU } = storeToRefs(appStore) // pinia提供的方法，使我们获取到的数据是响应式的
-let userInfo = reactive({})
+const userInfo = reactive({})
 function changeAside() {
-  // appStore.changeAside()
   appStore.OPENMENU = !appStore.OPENMENU
+  // appStore.changeAside()
   // appStore.$patch((state) => {
   //   console.log(state)
   //   state.items.push({ OPENMENU: false })

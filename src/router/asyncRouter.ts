@@ -7,8 +7,7 @@ export const asyncRouter = [
         children: [
             {
                 path: 'home',
-                name: 'home',
-                meta: {title: '首页', icon: ''},
+                meta: { title: '首页', icon: '' },
                 component: () => import('@/views/home/index.vue')
             }
         ]
@@ -16,39 +15,39 @@ export const asyncRouter = [
     {
         path: '/echarts',
         component: Layout,
-        redirect: '/echarts/index',
+        redirect: '/echarts/pie-echarts',
         children: [
             {
-                path: 'index',
-                name: 'index',
-                meta: {title: 'echarts', icon: ''},
-                component: () => import('@/views/home/index.vue')
+                path: 'pie-echarts',
+                meta: { title: '饼图', icon: '' },
+                component: () => import('@/views/echarts/pie.vue'),
+            },
+            {
+                path: 'line-echarts',
+                meta: { title: '线性图', icon: '' },
+                component: () => import('@/views/echarts/pie.vue'),
             }
         ]
     },
     {
         path: '/role',
+        meta: { title: '权限管理', icon: '' },
         component: Layout,
         children: [
             {
-                path: '/',
-                name: 'role',
-                meta: {title: '权限管理', icon: ''},
-                component: () => import('@/views/home/index.vue'),
-                children: [
-                    {
-                        path: 'apiroles',
-                        name: 'echarts',
-                        meta: {title: 'echarts', icon: ''},
-                        component: () => import('@/views/role/apirole/index.vue')
-                    },
-                    {
-                        path: 'menuroles',
-                        name: 'echarts',
-                        meta: {title: 'echarts', icon: ''},
-                        component: () => import('@/views/role/menurole/index.vue')
-                    }
-                ]
+                path: 'apiroles',
+                meta: { title: 'api管理', icon: '' },
+                component: () => import('@/views/role/apirole/apirole.vue')
+            },
+            {
+                path: 'menuroles',
+                meta: { title: '菜单权限', icon: '' },
+                component: () => import('@/views/role/menurole/menurole.vue')
+            },
+            {
+                path: 'pageroles',
+                meta: { title: '页面权限', icon: '' },
+                component: () => import('@/views/role/pagerole/pagerole.vue')
             }
         ]
     }

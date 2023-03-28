@@ -18,8 +18,8 @@
   </el-sub-menu>
 </template>
 <script setup lang="ts" name="MenuItem">
-import { ref } from 'vue'
 
-const menuList = ref([{ name: '门诊', path: 'menzhen', icon: '', children: [] }])
+// const menuList = getMenuList()
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

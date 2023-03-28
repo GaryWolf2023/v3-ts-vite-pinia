@@ -36,5 +36,7 @@ declare module '@vue/runtime-core' {
     ElTimePicker: typeof import('element-plus/es')['ElTimePicker']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SvgIcon: typeof import('./src/components/SvgIcons/SvgIcon.vue')['default']
+    SvgIcons: typeof import('./src/components/SvgIcons/index.vue')['default']
   }
 }

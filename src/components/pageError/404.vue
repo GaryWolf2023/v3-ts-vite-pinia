@@ -1,6 +1,6 @@
 <template>
   <div class="page-404">
-    <img src="@/static/404.png" alt="404" class="image-404" />
+    <img src="@/static/images/404.png" alt="404" class="image-404" />
     <div class="info-404">
       <p class="top-one">404</p>
       <p class="top-two">UH HO! 页面丢失</p>
