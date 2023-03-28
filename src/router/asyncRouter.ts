@@ -2,7 +2,7 @@ import Layout from '@/layout/index.vue'
 export const asyncRouter = [
     {
         path: '/',
-        component: Layout,
+        component: () => import('@/layout/index.vue'),
         redirect: '/home',
         children: [
             {
@@ -14,7 +14,7 @@ export const asyncRouter = [
     },
     {
         path: '/echarts',
-        component: Layout,
+        component: () => import('@/layout/index.vue'),
         redirect: '/echarts/pie-echarts',
         children: [
             {
@@ -32,7 +32,7 @@ export const asyncRouter = [
     {
         path: '/role',
         meta: { title: '权限管理', icon: '' },
-        component: Layout,
+        component: () => import('@/layout/index.vue'),
         children: [
             {
                 path: 'apiroles',

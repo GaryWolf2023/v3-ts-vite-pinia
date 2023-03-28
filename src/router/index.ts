@@ -4,7 +4,7 @@ import Login from '@/views/login/login.vue'
 import Page404 from '@/components/pageError/404.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     ...asyncRouter,
     {
