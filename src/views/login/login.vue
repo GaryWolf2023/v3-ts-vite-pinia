@@ -1,15 +1,24 @@
 <template>
   <div class="login-box">
-    <el-form :model="form" label-width="120px">
+    <el-form 
+    :model="form" 
+    label-width="120px" 
+    >
       <p class="login-title">{{ $t('login.logintitle') }}</p>
       <el-form-item :label="$t('login.username')">
-        <el-input v-model="form.username" type="text" />
+        <el-input :style="{width:'80%',height: '40px'}" v-model="form.username" type="text" />
       </el-form-item>
       <el-form-item :label="$t('login.password')">
-        <el-input v-model="form.password" type="text" />
+        <el-input :style="{width:'80%',height: '40px'}" v-model="form.password" type="text" />
       </el-form-item>
       <el-form-item>
-        <el-button :style="{width:'100%'}" type="primary" @click="login">{{ $t('login.login') }}</el-button>
+        <el-button 
+        v-loading="loading"
+        element-loading-background="rgba(212, 242, 232, 0.1)"
+        :style="{width:'80%',height: '40px'}" 
+        type="primary" @click="login">
+        {{ $t('login.login') }}
+      </el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -17,15 +26,25 @@
 
 <script setup lang="ts" name="Login">
 import router from '@/router';
-
+let loading = ref(false)
 let form = reactive({
   username: 'admin',
   password: '123456',
   CAPTCHA: ''
 })
 const login = () :void => {
+  loading.value = true
   if (form.username==='admin'&&form.password==='123456') {
-    router.push({ path: '/home' })
+    const timer = setTimeout(()=>{
+      router.push({ path: '/home' })
+      loading.value = false
+      clearTimeout(timer)
+    },1800)
+  } else {
+    const timer = setTimeout(()=>{
+      loading.value = false
+      clearTimeout(timer)
+    },1800)
   }
 }
 </script>
@@ -42,7 +61,7 @@ const login = () :void => {
   ::v-deep(.el-form) {
     width: 560px;
     margin: 200px auto;
-    background-color: #d3d3d383;
+    background-color: #00000000;
     padding: 80px 60px 40px 0px;
     border-radius: 20px;
     position: relative;
@@ -63,6 +82,7 @@ const login = () :void => {
       width: 100%;
       height: 46px;
       .el-form-item__label {
+        color: beige;
         height: 100%;
         line-height: 46px;
       }
