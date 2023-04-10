@@ -25,11 +25,13 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+yarn install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
+yarn run dev
 npm run dev
 ```
 
